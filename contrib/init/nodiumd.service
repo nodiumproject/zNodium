@@ -1,0 +1,26 @@
+[Unit]
+Description=Nodium's distributed currency daemon
+After=network.target
+
+[Service]
+User=nodium
+Group=nodium
+
+Type=forking
+PIDFile=/var/lib/nodiumd/nodiumd.pid
+
+ExecStart=/usr/bin/nodiumd -daemon -pid=/var/lib/nodiumd/nodiumd.pid \
+          -conf=/etc/nodium/nodium.conf -datadir=/var/lib/nodiumd
+
+ExecStop=-/usr/bin/nodium-cli -conf=/etc/nodium/nodium.conf \
+         -datadir=/var/lib/nodiumd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

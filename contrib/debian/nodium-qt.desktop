@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Nodium
+Comment=Nodium P2P Cryptocurrency
+Comment[fr]=Nodium, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Nodium, eşten eşe kriptografik sanal para birimi
+Exec=nodium-qt %u
+Terminal=false
+Type=Application
+Icon=nodium128
+MimeType=x-scheme-handler/nodium;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/nodiumd: config file for /etc/init.d/nodiumd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/nodium/nodium.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/nodiumd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/nodiumd.pid"
+
+# Where to write nodiumd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/nodiumd"
+
+# User and group to own nodiumd process
+#BITCOIND_USER="nodium"
+#BITCOIND_GROUP="nodium"
+
+# Path to nodiumd executable
+#BITCOIND_BIN="/usr/bin/nodiumd"
+
+# Nice value to run nodiumd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
