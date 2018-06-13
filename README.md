@@ -15,8 +15,9 @@ More information at [nodium.org](http://www.nodium.org)
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
 <tr><td>Max Coin Supply (PoW Phase)</td><td>49,750 XN</td></tr>
-<tr><td>Max Coin Supply (PoS Phase, Pre Infinite)</td><td>30,259,115 XN</td></tr>
+<tr><td>Max Coin Supply (PoS Phase, Pre Infinite)</td><td>29,259,115 XN</td></tr>
 <tr><td>Premine</td><td>4,000,000 XN*</td></tr>
+<tr><td>Premine burn</td><td>1,000,000 XN*</td></tr>
 <tr><td>Block maturity</td><td>60 minutes</td></tr>
 </table>
 
