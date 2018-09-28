@@ -211,3 +211,42 @@ Hardening enables the following features:
 	RW- R-- RW-
 
     The STK RW- means that the stack is readable and writeable but not executable.
+
+	ARM Cross-compilation
+	-------------------
+	These steps can be performed on, for example, an Ubuntu VM. The depends system
+	will also work on other Linux distributions, however the commands for
+	installing the toolchain will be different.
+
+	Make sure you install the build requirements mentioned above.
+	Then, install the toolchain and curl:
+
+	Build ARM 32-bit
+	-------------------
+	Depencies:
+
+			sudo apt-get install g++-arm-linux-gnueabihf curl
+
+	To build executables for ARM 32-bit:
+
+	    cd depends
+	    make HOST=arm-linux-gnueabihf NO_QT=1
+	    cd ..
+	    ./autogen.sh
+	    ./configure --prefix=$PWD/depends/arm-linux-gnueabihf --enable-glibc-back-compat --enable-reduce-exports LDFLAGS=-static-libstdc++
+	    make
+
+	Build ARM 64-bit
+	-------------------
+	Depencies:
+
+			sudo apt-get install g++-aarch64-linux-gnu curl
+
+	To build executables for ARM 64-bit:
+
+			cd depends
+			make HOST=aarch64-linux-gnu
+			cd ..
+			./autogen.sh
+			./configure --prefix==$PWD/depends/aarch64-linux-gnu
+			make
